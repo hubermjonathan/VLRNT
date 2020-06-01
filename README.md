@@ -1,11 +1,20 @@
-# discord-bot-boilerplate
-a simple template for creating discord bots
+# valorant-bot
+**v0.0.0** <img src="assets/logo.png" align="right" alt="logo" width="200px" height="200px"></br>
+valorant-bot is a discord bot that provides statistics for the game VALORANT</br>
+[main code](bot.py) | [author](#author)
 
-## how to use
-1. Click the "Use this template" button at the top and enter the repository name you want to use.
-2. Create a `.env` file and add the values `TOKEN=YOUR_DISCORD_BOT_TOKEN` and `OWNER_ID=YOUR_DISCORD_ID` to it.
-
-## how to run
-`python bot.py` to run the bot
-
-use environment variable `DEBUG=True` to run in development mode
+### invite the bot to your server!
+[click here](https://discordapp.com/oauth2/authorize?client_id=717125416858550322&scope=bot)
+### current features
+**nothing just yet**
+### upcoming features
+**riot id linking** - link your riot id to your discord account so you don't have to type it everytime you want your stats</br>
+**unrated stats** - get stats for unrated</br>
+**ranked stats** - get stats for ranked</br>
+**agent stats** - get stats about agents</br>
+### version history
+**v0.0.0** - started development
+#### author
+Jon Huber</br>
+Purdue Computer Science 2021</br>
+[hubermjonathan@gmail.com](mailto:hubermjonathan@gmail.com)

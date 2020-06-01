@@ -15,8 +15,9 @@ class Admin(commands.Cog):
     async def on_ready(self):
         # message owner
         if os.getenv('DEV') is None:
+            print('BOT STATUS: ready')
             user = await self.bot.fetch_user(self.bot.owner_id)
-            await user.send(f'Deployment complete at {datetime.now().time()}')
+            await user.send(f'Bot ready at {datetime.now().time()}')
 
     @commands.command()
     @commands.is_owner()
