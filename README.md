@@ -8,15 +8,15 @@ valorant-bot is a discord bot that provides statistics for the game VALORANT</br
 ### current features
 **nothing just yet** - the VALORANT API is still in development, so there is no real data being used
 ### upcoming features
-**riot id linking** - link your riot id to your discord account so you don't have to type it everytime you want your stats</br>
 **unrated stats** - get stats for unrated</br>
 **ranked stats** - get stats for ranked</br>
 **agent stats** - get stats about agents</br>
-**match history** - get insights on your match history</br>
+**match history** - get insights on your match history, with round by round analysis</br>
+**scouting** - scout out your opponents for a match</br>
 ### version history
-**v0.0.2** - added match history</br>
-**v0.0.1** - added unrated and ranked stats</br>
-**v0.0.0** - started development
+**v0.0.2** - added match history skeleton</br>
+**v0.0.1** - added unrated and ranked stats skeleton</br>
+**v0.0.0** - started development skeleton</br>
 #### author
 Jon Huber</br>
 Purdue Computer Science 2021</br>
