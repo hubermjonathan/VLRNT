@@ -1,14 +1,14 @@
-# valorant-bot
+# VLRNT
 **v0.0.5** <img src="https://hubermjonathan-valorant-bot.herokuapp.com/icon" align="right" alt="icon" width="200px" height="200px"></br>
-valorant-bot is a discord bot that provides statistics for the game VALORANT</br>
-[main code](bot.py) | [author](#author)
+VLRNT provides VALORANT statistics, agent information, arrow/smoke lineups, and more to your Discord server!</br>
+[author](#author)
 
 ### invite the bot to your server!
-[click here](https://discordapp.com/oauth2/authorize?client_id=717125416858550322&scope=bot)
+[click here](https://discordapp.com/oauth2/authorize?client_id=717125416858550322&permissions=51200&scope=bot)
 ### current features
-**patch notes** - get the latest patch notes
-**agents** - get information about the agents
-**stats skeleton** - get a preview of what stat tracking will look like once the VALORANT API is released
+**patch notes** - get the latest patch notes</br>
+**agents** - get information about the agents</br>
+**stats skeleton** - get a preview of what stat tracking will look like once the VALORANT API is released</br>
 ### upcoming features
 **unrated stats** - get stats for unrated</br>
 **ranked stats** - get stats for ranked</br>
@@ -27,4 +27,5 @@ valorant-bot is a discord bot that provides statistics for the game VALORANT</br
 **v0.0.0** - started development skeleton</br>
 #### author
 Jon Huber</br>
+Huberrrr#2959 on Discord</br>
 [hubermjonathan@gmail.com](mailto:hubermjonathan@gmail.com)
