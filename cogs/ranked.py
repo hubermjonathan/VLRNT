@@ -24,7 +24,7 @@ class Ranked(commands.Cog):
 
         # create the embed
         embed = discord.Embed(title=riot_id, description='Ranked Stats', color=globals.embed_color)
-        embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/viper')
+        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/viper')
         embed.add_field(name='**Games**',
             value=f'**Games Won:** {games_won}\n' \
                 f'**Games Lost:** {games_lost}\n'

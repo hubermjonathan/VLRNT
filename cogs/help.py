@@ -19,7 +19,7 @@ class Help(commands.Cog):
                     '[] indicates a required argument and {} indicates an optional one. Do not include these in the commands.\n',
                 color=globals.embed_color
             )
-            embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+            embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/icon')
             embed.add_field(name='**Available Commands**',
                 value='**help {command}** - Help messages\n' \
                     '**unrated [riot_id]** - Unrated stats\n' \
@@ -47,7 +47,7 @@ class Help(commands.Cog):
             description='**unrated [riot_id]**',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/icon')
         embed.add_field(name='**Aliases**',
             value='u, ur\n',
             inline=False
@@ -73,7 +73,7 @@ class Help(commands.Cog):
             description='**ranked [riot_id]**',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/icon')
         embed.add_field(name='**Aliases**',
             value='r\n',
             inline=False
@@ -99,7 +99,7 @@ class Help(commands.Cog):
             description='**scout [riot_id]**',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/icon')
         embed.add_field(name='**Aliases**',
             value='s\n',
             inline=False
@@ -125,7 +125,7 @@ class Help(commands.Cog):
             description='**history [riot_id] {number}**',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/icon')
         embed.add_field(name='**Aliases**',
             value='h, hist\n',
             inline=False
@@ -152,7 +152,7 @@ class Help(commands.Cog):
             description='**notes**',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/icon')
         embed.add_field(name='**Aliases**',
             value='n, pn\n',
             inline=False
@@ -177,7 +177,7 @@ class Help(commands.Cog):
             description='**agents [agent_name]**',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/icon')
         embed.add_field(name='**Aliases**',
             value='None\n',
             inline=False
@@ -203,7 +203,7 @@ class Help(commands.Cog):
             description='**arrows [map_name]**',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/icon')
         embed.add_field(name='**Aliases**',
             value='arw\n',
             inline=False
