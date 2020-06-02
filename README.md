@@ -1,18 +1,19 @@
 # valorant-bot
-**v0.0.0** <img src="https://hubermjonathan-valorant-bot.herokuapp.com/icon" align="right" alt="icon" width="200px" height="200px"></br>
+**v0.0.1** <img src="https://hubermjonathan-valorant-bot.herokuapp.com/icon" align="right" alt="icon" width="200px" height="200px"></br>
 valorant-bot is a discord bot that provides statistics for the game VALORANT</br>
 [main code](bot.py) | [author](#author)
 
 ### invite the bot to your server!
 [click here](https://discordapp.com/oauth2/authorize?client_id=717125416858550322&scope=bot)
 ### current features
-**nothing just yet**
+**nothing just yet** - the VALORANT API is still in development, so there is no real data being used
 ### upcoming features
 **riot id linking** - link your riot id to your discord account so you don't have to type it everytime you want your stats</br>
 **unrated stats** - get stats for unrated</br>
 **ranked stats** - get stats for ranked</br>
 **agent stats** - get stats about agents</br>
 ### version history
+**v0.0.1** - added unrated and ranked stats</br>
 **v0.0.0** - started development
 #### author
 Jon Huber</br>
