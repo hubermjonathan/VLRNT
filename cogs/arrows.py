@@ -36,6 +36,10 @@ class Arrows(commands.Cog):
             color=globals.embed_color
         )
         embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/sova')
+        embed.add_field(name='**Coming Soon**',
+            value='The bot owner is currently gathering arrow locations and will update this feature soon.',
+            inline=False
+        )
 
         # send the message
         await ctx.send(embed=embed)
@@ -48,6 +52,10 @@ class Arrows(commands.Cog):
             color=globals.embed_color
         )
         embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/sova')
+        embed.add_field(name='**Coming Soon**',
+            value='The bot owner is currently gathering arrow locations and will update this feature soon.',
+            inline=False
+        )
 
         # send the message
         await ctx.send(embed=embed)
@@ -60,6 +68,10 @@ class Arrows(commands.Cog):
             color=globals.embed_color
         )
         embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/sova')
+        embed.add_field(name='**Coming Soon**',
+            value='The bot owner is currently gathering arrow locations and will update this feature soon.',
+            inline=False
+        )
 
         # send the message
         await ctx.send(embed=embed)
@@ -72,6 +84,10 @@ class Arrows(commands.Cog):
             color=globals.embed_color
         )
         embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/sova')
+        embed.add_field(name='**Coming Soon**',
+            value='The bot owner is currently gathering arrow locations and will update this feature soon.',
+            inline=False
+        )
 
         # send the message
         await ctx.send(embed=embed)
