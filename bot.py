@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 import discord
 from discord.ext import commands
+import globals
 
 # load environment variables
 if os.getenv('DEV') is not None:
@@ -10,7 +11,7 @@ if os.getenv('DEV') is not None:
 # create the bot
 bot = commands.Bot(owner_id=int(os.getenv('OWNER_ID')),
                    command_prefix=commands.when_mentioned_or('val '),
-                   activity=discord.Activity(type=discord.ActivityType.listening, name='val help'))
+                   activity=discord.Activity(type=discord.ActivityType.listening, name=f'val help | {globals.version_number}'))
 bot.remove_command('help')
 
 # add all the cogs
