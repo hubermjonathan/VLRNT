@@ -4,35 +4,31 @@ import globals
 
 
 def setup(bot):
-    bot.add_cog(Learn(bot))
+    bot.add_cog(Agents(bot))
 
 
-class Learn(commands.Cog):
+class Agents(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.group()
-    async def learn(self, ctx):
+    @commands.group(case_insensitive=True)
+    async def agents(self, ctx):
         if ctx.invoked_subcommand is None:
             # create the embed
             embed = discord.Embed(
-                title='What would you like to learn about?',
-                description='Use **val learn [topic]** to choose a topic from the following.\n',
+                title='Which agent would you like to learn about?',
+                description='Use **val agents [agent_name]** to choose an agent from the following.\n',
                 color=globals.embed_color
             )
             embed.add_field(name='**Agents**',
                 value='Jett, Raze, Breach, Omen, Brimstone, Phoenix, Sage, Sova, Viper, Cypher, Reyna',
                 inline=False
             )
-            embed.add_field(name='**Future Topics**',
-                value='Sova arrows, Viper smokes, etc.',
-                inline=False
-            )
 
             # send the message
             await ctx.send(embed=embed)
 
-    @learn.command()
+    @agents.command()
     async def jett(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -56,7 +52,7 @@ class Learn(commands.Cog):
             value='EQUIP a set of highly accurate knives that recharge on killing an opponent. FIRE to throw a single knife at your target. ALTERNATE FIRE to throw all remaining daggers at your target.',
             inline=False
         )
-        embed.add_field(name='**Video Abilities**',
+        embed.add_field(name='**Ability Videos**',
             value='To view videos of Jett\'s abilities visit https://playvalorant.com/en-us/agents/jett/',
             inline=False
         )
@@ -64,7 +60,7 @@ class Learn(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @learn.command()
+    @agents.command()
     async def raze(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -88,7 +84,7 @@ class Learn(commands.Cog):
             value='EQUIP a rocket launcher. FIRE shoots a rocket that does massive area damage on contact with anything.',
             inline=False
         )
-        embed.add_field(name='**Video Abilities**',
+        embed.add_field(name='**Ability Videos**',
             value='To view videos of Raze\'s abilities visit https://playvalorant.com/en-us/agents/raze/',
             inline=False
         )
@@ -96,7 +92,7 @@ class Learn(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @learn.command()
+    @agents.command()
     async def breach(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -120,7 +116,7 @@ class Learn(commands.Cog):
             value='EQUIP a seismic charge. FIRE to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it.',
             inline=False
         )
-        embed.add_field(name='**Video Abilities**',
+        embed.add_field(name='**Ability Videos**',
             value='To view videos of Breach\'s abilities visit https://playvalorant.com/en-us/agents/breach/',
             inline=False
         )
@@ -128,7 +124,7 @@ class Learn(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @learn.command()
+    @agents.command()
     async def omen(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -152,7 +148,7 @@ class Learn(commands.Cog):
             value='EQUIP a tactical map. FIRE to begin teleporting to the selected location. While teleporting, Omen will appear as a Shade that can be destroyed by an enemy to cancel his teleport.',
             inline=False
         )
-        embed.add_field(name='**Video Abilities**',
+        embed.add_field(name='**Ability Videos**',
             value='To view videos of Omen\'s abilities visit https://playvalorant.com/en-us/agents/omen/',
             inline=False
         )
@@ -160,7 +156,7 @@ class Learn(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @learn.command()
+    @agents.command()
     async def brimstone(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -184,7 +180,7 @@ class Learn(commands.Cog):
             value='EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.',
             inline=False
         )
-        embed.add_field(name='**Video Abilities**',
+        embed.add_field(name='**Ability Videos**',
             value='To view videos of Brimstone\'s abilities visit https://playvalorant.com/en-us/agents/brimstone/',
             inline=False
         )
@@ -192,7 +188,7 @@ class Learn(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @learn.command()
+    @agents.command()
     async def phoenix(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -216,7 +212,7 @@ class Learn(commands.Cog):
             value='INSTANTLY place a marker at Phoenix’s location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.',
             inline=False
         )
-        embed.add_field(name='**Video Abilities**',
+        embed.add_field(name='**Ability Videos**',
             value='To view videos of Phoenix\'s abilities visit https://playvalorant.com/en-us/agents/phoenix/',
             inline=False
         )
@@ -224,7 +220,7 @@ class Learn(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @learn.command()
+    @agents.command()
     async def sage(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -248,7 +244,7 @@ class Learn(commands.Cog):
             value='EQUIP a resurrection ability. FIRE with your crosshairs placed over a dead ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health.',
             inline=False
         )
-        embed.add_field(name='**Video Abilities**',
+        embed.add_field(name='**Ability Videos**',
             value='To view videos of Sage\'s abilities visit https://playvalorant.com/en-us/agents/sage/',
             inline=False
         )
@@ -256,7 +252,7 @@ class Learn(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @learn.command()
+    @agents.command()
     async def sova(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -280,7 +276,7 @@ class Learn(commands.Cog):
             value='EQUIP a bow with three long-range wall-piercing energy blasts. FIRE to release an energy blast in a line in front of Sova, dealing damage and revealing the location of enemies caught in the line. This ability can be RE-USED up to two more times while the ability timer is active.',
             inline=False
         )
-        embed.add_field(name='**Video Abilities**',
+        embed.add_field(name='**Ability Videos**',
             value='To view videos of Sova\'s abilities visit https://playvalorant.com/en-us/agents/sova/',
             inline=False
         )
@@ -288,7 +284,7 @@ class Learn(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @learn.command()
+    @agents.command()
     async def viper(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -312,7 +308,7 @@ class Learn(commands.Cog):
             value='EQUIP a chemical sprayer. FIRE to spray a chemical cloud in all directions around Viper, creating a large cloud that reduces the vision range and maximum health of players inside of it.',
             inline=False
         )
-        embed.add_field(name='**Video Abilities**',
+        embed.add_field(name='**Ability Videos**',
             value='To view videos of Viper\'s abilities visit https://playvalorant.com/en-us/agents/viper/',
             inline=False
         )
@@ -320,7 +316,7 @@ class Learn(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @learn.command()
+    @agents.command()
     async def cypher(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -344,7 +340,7 @@ class Learn(commands.Cog):
             value='INSTANTLY use on a dead enemy player in your crosshairs to reveal the location of all living enemy players.',
             inline=False
         )
-        embed.add_field(name='**Video Abilities**',
+        embed.add_field(name='**Ability Videos**',
             value='To view videos of Cypher\'s abilities visit https://playvalorant.com/en-us/agents/cypher/',
             inline=False
         )
@@ -352,7 +348,7 @@ class Learn(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @learn.command()
+    @agents.command()
     async def reyna(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -376,7 +372,7 @@ class Learn(commands.Cog):
             value='INSTANTLY enter a frenzy, increasing firing speed, equip and reload speed dramatically. Scoring a kill renews the duration.',
             inline=False
         )
-        embed.add_field(name='**Video Abilities**',
+        embed.add_field(name='**Ability Videos**',
             value='To view videos of Reyna\'s abilities visit https://playvalorant.com/en-us/agents/reyna/',
             inline=False
         )
