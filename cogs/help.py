@@ -16,7 +16,7 @@ class Help(commands.Cog):
             # create the embed
             embed = discord.Embed(title='Valorant Bot Help',
                 description='Use **val help {command}** for more information about a specific command.\n' \
-                    '[] indicates a required argument and {} indicates and optional one. Do not include these in the commands.\n',
+                    '[] indicates a required argument and {} indicates an optional one. Do not include these in the commands.\n',
                 color=globals.embed_color
             )
             embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
@@ -26,7 +26,8 @@ class Help(commands.Cog):
                     '**ranked [riot_id]** - Ranked stats\n' \
                     '**history [riot_id] {number}** - Match history\n' \
                     '**notes** - Latest patch notes\n' \
-                    '**learn [topic]** - Learning topics\n',
+                    '**learn [topic]** - Learning topics\n' \
+                    '**scout [riot_id]** - Current game\n',
                 inline=False
             )
             embed.add_field(name='**Owner**',
@@ -161,6 +162,32 @@ class Help(commands.Cog):
         )
         embed.add_field(name='**Description**',
             value='Learn about various topics in VALORANT like agents, tricks, and smokes.',
+            inline=False
+        )
+        embed.set_footer(text=globals.version_number)
+
+        # send the message
+        await ctx.send(embed=embed)
+
+    @help.command(aliases=['s'])
+    async def scout(self, ctx):
+        # create the embed
+        embed = discord.Embed(title='Valorant Bot Help',
+            description='**scout [riot_id]**',
+            color=globals.embed_color
+        )
+        embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.add_field(name='**Aliases**',
+            value='s\n',
+            inline=False
+        )
+        embed.add_field(name='**Arguments**',
+            value='**scout** - [Required] Command group\n' \
+                '**riot_id** - [Required] The Riot ID of the user to return stats for\n',
+            inline=False
+        )
+        embed.add_field(name='**Description**',
+            value='Get a quick overview of your teammates and enemies for a match.',
             inline=False
         )
         embed.set_footer(text=globals.version_number)
