@@ -14,10 +14,16 @@ class Admin(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         # message owner
-        if os.getenv('DEV') is None:
+        if os.getenv('DEV') is not None:
             print('BOT STATUS: ready')
             user = await self.bot.fetch_user(self.bot.owner_id)
-            await user.send(f'Bot ready at {datetime.now().time()}')
+            await user.send(f'Bot ready at {datetime.now().strftime("%H:%M:%S")}')
+
+    @commands.command(aliases=['c'])
+    @commands.is_owner()
+    async def cogs(self, ctx):
+        # send the message
+        await ctx.author.send(f'Current cogs: {", ".join(self.bot.cogs)}')
 
     @commands.command(aliases=['l'])
     @commands.is_owner()
@@ -25,7 +31,7 @@ class Admin(commands.Cog):
         # reload the extension
         try:
             self.bot.load_extension(f'cogs.{cog}')
-        except Exception as e:
+        except Exception:
             await ctx.message.add_reaction('👎')
             return
 
@@ -38,7 +44,7 @@ class Admin(commands.Cog):
         # reload the extension
         try:
             self.bot.unload_extension(f'cogs.{cog}')
-        except Exception as e:
+        except Exception:
             await ctx.message.add_reaction('👎')
             return
 
@@ -51,7 +57,7 @@ class Admin(commands.Cog):
         # reload the extension
         try:
             self.bot.reload_extension(f'cogs.{cog}')
-        except Exception as e:
+        except Exception:
             await ctx.message.add_reaction('👎')
             return
 

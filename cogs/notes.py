@@ -11,7 +11,7 @@ class Notes(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+    @commands.command(aliases=['n', 'pn'])
     async def notes(self, ctx):
         # get the patch notes
         r = requests.get('https://playvalorant.com/en-us/news/')
