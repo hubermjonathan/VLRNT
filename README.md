@@ -1,5 +1,5 @@
 # valorant-bot
-**v0.0.1** <img src="https://hubermjonathan-valorant-bot.herokuapp.com/icon" align="right" alt="icon" width="200px" height="200px"></br>
+**v0.0.2** <img src="https://hubermjonathan-valorant-bot.herokuapp.com/icon" align="right" alt="icon" width="200px" height="200px"></br>
 valorant-bot is a discord bot that provides statistics for the game VALORANT</br>
 [main code](bot.py) | [author](#author)
 
@@ -12,7 +12,9 @@ valorant-bot is a discord bot that provides statistics for the game VALORANT</br
 **unrated stats** - get stats for unrated</br>
 **ranked stats** - get stats for ranked</br>
 **agent stats** - get stats about agents</br>
+**match history** - get insights on your match history</br>
 ### version history
+**v0.0.2** - added match history</br>
 **v0.0.1** - added unrated and ranked stats</br>
 **v0.0.0** - started development
 #### author
