@@ -38,7 +38,7 @@ class History(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @commands.command()
+    @commands.command(aliases=['h', 'hist'])
     async def history(self, ctx, *args):
         # verify args
         if len(args) == 0:

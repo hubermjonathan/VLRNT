@@ -10,7 +10,7 @@ class Ranked(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+    @commands.command(aliases=['r'])
     async def ranked(self, ctx, riot_id):
         # TODO verify riot id
         if False:

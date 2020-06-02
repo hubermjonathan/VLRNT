@@ -37,7 +37,7 @@ class Help(commands.Cog):
             # send the message
             await ctx.send(embed=embed)
 
-    @help.command()
+    @help.command(aliases=['u', 'ur'])
     async def unrated(self, ctx):
         # create the embed
         embed=discord.Embed(title='Valorant Bot Help',
@@ -45,6 +45,10 @@ class Help(commands.Cog):
             color=globals.embed_color
         )
         embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.add_field(name='**Aliases**',
+            value='u, ur\n',
+            inline=False
+        )
         embed.add_field(name='**Arguments**',
             value='**unrated** - [Required] Command group\n' \
                 '**riot_id** - [Required] The Riot ID of the user to return stats for\n',
@@ -59,7 +63,7 @@ class Help(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @help.command()
+    @help.command(aliases=['r'])
     async def ranked(self, ctx):
         # create the embed
         embed=discord.Embed(title='Valorant Bot Help',
@@ -67,6 +71,10 @@ class Help(commands.Cog):
             color=globals.embed_color
         )
         embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.add_field(name='**Aliases**',
+            value='r\n',
+            inline=False
+        )
         embed.add_field(name='**Arguments**',
             value='**ranked** - [Required] Command group\n' \
                 '**riot_id** - [Required] The Riot ID of the user to return stats for\n',
@@ -81,7 +89,7 @@ class Help(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @help.command()
+    @help.command(aliases=['h', 'hist'])
     async def history(self, ctx):
         # create the embed
         embed=discord.Embed(title='Valorant Bot Help',
@@ -89,6 +97,10 @@ class Help(commands.Cog):
             color=globals.embed_color
         )
         embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.add_field(name='**Aliases**',
+            value='h, hist\n',
+            inline=False
+        )
         embed.add_field(name='**Arguments**',
             value='**history** - [Required] Command group\n' \
                 '**riot_id** - [Required] The Riot ID of the user to return stats for\n' \

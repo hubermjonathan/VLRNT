@@ -10,7 +10,7 @@ class Unrated(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+    @commands.command(aliases=['u', 'ur'])
     async def unrated(self, ctx, riot_id):
         # TODO verify riot id
         if False:

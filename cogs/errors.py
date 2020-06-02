@@ -12,11 +12,8 @@ class Errors(commands.Cog):
         self.bot = bot
 
     def create_error_message(self, message):
-        # create the embed
-        embed=discord.Embed(title='Error', description=message, color=globals.embed_color)
-
         # return the embed
-        return embed
+        return discord.Embed(title='Error', description=message, color=globals.embed_color)
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
