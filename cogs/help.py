@@ -24,10 +24,11 @@ class Help(commands.Cog):
                 value='**help {command}** - Help messages\n' \
                     '**unrated [riot_id]** - Unrated stats\n' \
                     '**ranked [riot_id]** - Ranked stats\n' \
+                    '**scout [riot_id]** - Current game\n' \
                     '**history [riot_id] {number}** - Match history\n' \
                     '**notes** - Latest patch notes\n' \
-                    '**learn [topic]** - Learning topics\n' \
-                    '**scout [riot_id]** - Current game\n',
+                    '**agents [agent_name]** - Agent information\n' \
+                    '**arrows [map_name]** - Sova arrows\n',
                 inline=False
             )
             embed.add_field(name='**Owner**',
@@ -91,6 +92,32 @@ class Help(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
+    @help.command(aliases=['s'])
+    async def scout(self, ctx):
+        # create the embed
+        embed = discord.Embed(title='Valorant Bot Help',
+            description='**scout [riot_id]**',
+            color=globals.embed_color
+        )
+        embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.add_field(name='**Aliases**',
+            value='s\n',
+            inline=False
+        )
+        embed.add_field(name='**Arguments**',
+            value='**scout** - [Required] Command group\n' \
+                '**riot_id** - [Required] The Riot ID of the user to return stats for\n',
+            inline=False
+        )
+        embed.add_field(name='**Description**',
+            value='Get a quick overview of your teammates and enemies for a match.',
+            inline=False
+        )
+        embed.set_footer(text=globals.version_number)
+
+        # send the message
+        await ctx.send(embed=embed)
+
     @help.command(aliases=['h', 'hist'])
     async def history(self, ctx):
         # create the embed
@@ -144,10 +171,10 @@ class Help(commands.Cog):
         await ctx.send(embed=embed)
 
     @help.command()
-    async def learn(self, ctx):
+    async def agents(self, ctx):
         # create the embed
         embed = discord.Embed(title='Valorant Bot Help',
-            description='**learn [topic]**',
+            description='**agents [agent_name]**',
             color=globals.embed_color
         )
         embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
@@ -156,12 +183,12 @@ class Help(commands.Cog):
             inline=False
         )
         embed.add_field(name='**Arguments**',
-            value='**learn** - [Required] Command group\n' \
-                '**topic** - [Required] The topic to get information for\n',
+            value='**agents** - [Required] Command group\n' \
+                '**agent_name** - [Required] The agent to get information for\n',
             inline=False
         )
         embed.add_field(name='**Description**',
-            value='Learn about various topics in VALORANT like agents, tricks, and smokes.',
+            value='Learn about the agents of VALORANT.',
             inline=False
         )
         embed.set_footer(text=globals.version_number)
@@ -169,25 +196,25 @@ class Help(commands.Cog):
         # send the message
         await ctx.send(embed=embed)
 
-    @help.command(aliases=['s'])
-    async def scout(self, ctx):
+    @help.command(aliases=['arw'])
+    async def arrows(self, ctx):
         # create the embed
         embed = discord.Embed(title='Valorant Bot Help',
-            description='**scout [riot_id]**',
+            description='**arrows [map_name]**',
             color=globals.embed_color
         )
         embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
         embed.add_field(name='**Aliases**',
-            value='s\n',
+            value='arw\n',
             inline=False
         )
         embed.add_field(name='**Arguments**',
-            value='**scout** - [Required] Command group\n' \
-                '**riot_id** - [Required] The Riot ID of the user to return stats for\n',
+            value='**arrows** - [Required] Command group\n' \
+                '**map_name** - [Required] The map name to get Sova arrows for\n',
             inline=False
         )
         embed.add_field(name='**Description**',
-            value='Get a quick overview of your teammates and enemies for a match.',
+            value='Get locations and lineups for Sova arrows.',
             inline=False
         )
         embed.set_footer(text=globals.version_number)
