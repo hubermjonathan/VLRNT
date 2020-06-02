@@ -9,8 +9,8 @@ if os.getenv('DEV') is not None:
 
 # create the bot
 bot = commands.Bot(owner_id=int(os.getenv('OWNER_ID')),
-                   command_prefix=commands.when_mentioned_or('~'),
-                   activity=discord.Activity(type=discord.ActivityType.listening, name='help'))
+                   command_prefix=commands.when_mentioned_or('val '),
+                   activity=discord.Activity(type=discord.ActivityType.listening, name='val help'))
 bot.remove_command('help')
 
 # add all the cogs
