@@ -10,7 +10,7 @@ class Help(commands.Cog):
         self.bot = bot
         self.version_number = 'v0.0.0'
         self.embed_color = 0xff4654
-        self.valorant_icon_url = 'https://i.imgur.com/PRJz8AC.png'
+        self.valorant_icon_url = 'https://hubermjonathan-valorant-bot.herokuapp.com/icon'
 
     @commands.group()
     async def help(self, ctx):

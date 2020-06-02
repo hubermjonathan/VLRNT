@@ -1,5 +1,5 @@
 # valorant-bot
-**v0.0.0** <img src="assets/icon.png" align="right" alt="icon" width="200px" height="200px"></br>
+**v0.0.0** <img src="https://hubermjonathan-valorant-bot.herokuapp.com/icon" align="right" alt="icon" width="200px" height="200px"></br>
 valorant-bot is a discord bot that provides statistics for the game VALORANT</br>
 [main code](bot.py) | [author](#author)
 
