@@ -38,13 +38,13 @@ class Admin(commands.Cog):
         # send the message
         await ctx.author.send(embed=discord.Embed(title='Stats', description=f'**Number of guilds:** {num_guilds}\n**Number of members:** {num_members}\n', color=globals.embed_color))
 
-    @commands.command(aliases=['c'])
+    @commands.command()
     @commands.is_owner()
     async def cogs(self, ctx):
         # send the message
         await ctx.author.send(embed=discord.Embed(title='Cogs', description=', '.join(self.bot.cogs), color=globals.embed_color))
 
-    @commands.command(aliases=['l'])
+    @commands.command()
     @commands.is_owner()
     async def load(self, ctx, cog):
         # reload the extension
@@ -57,7 +57,7 @@ class Admin(commands.Cog):
         # acknowledge the command
         await ctx.message.add_reaction('👍')
 
-    @commands.command(aliases=['ul'])
+    @commands.command()
     @commands.is_owner()
     async def unload(self, ctx, cog):
         # reload the extension

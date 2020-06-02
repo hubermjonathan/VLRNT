@@ -17,7 +17,7 @@ class Help(commands.Cog):
             embed=discord.Embed(title='Valorant Bot Help',
                 description='[] indicates a required argument and {} indicates and optional one.\n' \
                     'Do not include these in the commands.\n' \
-                    'Use **help {command}** for more information about a specific command.\n',
+                    'Use **val help {command}** for more information about a specific command.\n',
                 color=globals.embed_color
             )
             embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
@@ -25,7 +25,9 @@ class Help(commands.Cog):
                 value='**help {command}** - Help messages\n' \
                     '**unrated [riot_id]** - Unrated stats\n' \
                     '**ranked [riot_id]** - Ranked stats\n' \
-                    '**history [riot_id] {number}** - Match history\n',
+                    '**history [riot_id] {number}** - Match history\n' \
+                    '**notes** - Latest patch notes\n' \
+                    '**learn [topic]** - Learning topics\n',
                 inline=False
             )
             embed.add_field(name='**Owner**',
@@ -109,6 +111,57 @@ class Help(commands.Cog):
         )
         embed.add_field(name='**Description**',
             value='Look up match history for a given Riot ID or specify a number to get more details about a specific match.',
+            inline=False
+        )
+        embed.set_footer(text=globals.version_number)
+
+        # send the message
+        await ctx.send(embed=embed)
+
+    @help.command(aliases=['n', 'pn'])
+    async def notes(self, ctx):
+        # create the embed
+        embed=discord.Embed(title='Valorant Bot Help',
+            description='**notes**',
+            color=globals.embed_color
+        )
+        embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.add_field(name='**Aliases**',
+            value='n, pn\n',
+            inline=False
+        )
+        embed.add_field(name='**Arguments**',
+            value='**notes** - [Required] Command group\n',
+            inline=False
+        )
+        embed.add_field(name='**Description**',
+            value='Get the latest patch notes for VALORANT.',
+            inline=False
+        )
+        embed.set_footer(text=globals.version_number)
+
+        # send the message
+        await ctx.send(embed=embed)
+
+    @help.command()
+    async def learn(self, ctx):
+        # create the embed
+        embed=discord.Embed(title='Valorant Bot Help',
+            description='**learn [topic]**',
+            color=globals.embed_color
+        )
+        embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
+        embed.add_field(name='**Aliases**',
+            value='None\n',
+            inline=False
+        )
+        embed.add_field(name='**Arguments**',
+            value='**learn** - [Required] Command group\n' \
+                '**topic** - [Required] The topic to get information for\n',
+            inline=False
+        )
+        embed.add_field(name='**Description**',
+            value='Learn about various topics in VALORANT like agents, tricks, and smokes.',
             inline=False
         )
         embed.set_footer(text=globals.version_number)

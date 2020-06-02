@@ -1,2 +1,2 @@
-version_number = 'v0.0.3'
+version_number = 'v0.0.4'
 embed_color = 0xff4654
