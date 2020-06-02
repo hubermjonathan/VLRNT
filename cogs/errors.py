@@ -1,4 +1,6 @@
+import discord
 from discord.ext import commands
+import globals
 
 
 def setup(bot):
@@ -9,6 +11,13 @@ class Errors(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    def create_error_message(self, message):
+        # create the embed
+        embed=discord.Embed(title='Error', description=message, color=globals.embed_color)
+
+        # return the embed
+        return embed
+
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
         if isinstance(error, commands.NotOwner):
@@ -16,11 +25,14 @@ class Errors(commands.Cog):
         elif isinstance(error, commands.CommandNotFound):
             await ctx.message.add_reaction('❔')
         elif isinstance(error, commands.MissingRequiredArgument):
-            await ctx.message.add_reaction('❔')
-        elif isinstance(error, commands.PrivateMessageOnly):
-            return
-        elif isinstance(error, commands.NoPrivateMessage):
-            return
+            await ctx.send(embed=self.create_error_message(f'See `val help {ctx.command}` for correct command usage'))
+        elif isinstance(error, commands.ArgumentParsingError):
+            await ctx.send(embed=self.create_error_message(f'See `val help {ctx.command}` for correct command usage'))
+        elif isinstance(error, commands.TooManyArguments):
+            await ctx.send(embed=self.create_error_message(f'See `val help {ctx.command}` for correct command usage'))
+        elif isinstance(error, commands.BadArgument):
+            await ctx.send(embed=self.create_error_message(f'{error}'))
+
         else:
             print(f'BOT ERROR: {error}')
             await ctx.message.add_reaction('👎')
