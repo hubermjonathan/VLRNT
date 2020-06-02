@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
+import discord
 from discord.ext import commands
+import globals
 
 
 def setup(bot):
@@ -29,5 +31,13 @@ class Notes(commands.Cog):
                 highlights = a["href"]
                 break
 
+        # create the embed
+        embed = discord.Embed(title='Here are the latest patch notes!',
+            description=soup.title.string,
+            url=notes,
+            color=globals.embed_color
+        )
+        embed.set_image(url=highlights)
+
         # send the message
-        await ctx.send(f'Here are the latest patch notes!\n{notes}\n{highlights}\n')
+        await ctx.send(embed=embed)

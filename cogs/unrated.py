@@ -23,7 +23,7 @@ class Unrated(commands.Cog):
         games_lost = 31
 
         # create the embed
-        embed=discord.Embed(title=riot_id, description='Unrated Stats', color=globals.embed_color)
+        embed = discord.Embed(title=riot_id, description='Unrated Stats', color=globals.embed_color)
         embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/sova')
         embed.add_field(name='**Games**',
                         value=f'**Games Won:** {games_won}\n' \

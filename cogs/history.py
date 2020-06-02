@@ -12,7 +12,7 @@ class History(commands.Cog):
 
     async def get_match_history(self, ctx, riot_id, games):
         # create the embed
-        embed=discord.Embed(title=riot_id, description='Match History', color=globals.embed_color)
+        embed = discord.Embed(title=riot_id, description='Match History', color=globals.embed_color)
         for i, game in enumerate(games):
             embed.add_field(name=f'**Game {i+1}**',
                 value=f'**{game["map"]} - {game["result"]}**\n' \
@@ -27,7 +27,7 @@ class History(commands.Cog):
 
     async def get_single_game(self, ctx, riot_id, game):
         # create the embed
-        embed=discord.Embed(title=riot_id, color=globals.embed_color)
+        embed = discord.Embed(title=riot_id, color=globals.embed_color)
         embed.add_field(name=f'**{game["map"]} - {game["result"]}**\n',
             value=f'{game["score"]}\n' \
                 f'Combat Score: {game["avg_combat_score"]}\n' \

@@ -14,10 +14,9 @@ class Help(commands.Cog):
     async def help(self, ctx):
         if ctx.invoked_subcommand is None:
             # create the embed
-            embed=discord.Embed(title='Valorant Bot Help',
-                description='[] indicates a required argument and {} indicates and optional one.\n' \
-                    'Do not include these in the commands.\n' \
-                    'Use **val help {command}** for more information about a specific command.\n',
+            embed = discord.Embed(title='Valorant Bot Help',
+                description='Use **val help {command}** for more information about a specific command.\n' \
+                    '[] indicates a required argument and {} indicates and optional one. Do not include these in the commands.\n',
                 color=globals.embed_color
             )
             embed.set_thumbnail(url='https://hubermjonathan-valorant-bot.herokuapp.com/icon')
@@ -42,7 +41,7 @@ class Help(commands.Cog):
     @help.command(aliases=['u', 'ur'])
     async def unrated(self, ctx):
         # create the embed
-        embed=discord.Embed(title='Valorant Bot Help',
+        embed = discord.Embed(title='Valorant Bot Help',
             description='**unrated [riot_id]**',
             color=globals.embed_color
         )
@@ -68,7 +67,7 @@ class Help(commands.Cog):
     @help.command(aliases=['r'])
     async def ranked(self, ctx):
         # create the embed
-        embed=discord.Embed(title='Valorant Bot Help',
+        embed = discord.Embed(title='Valorant Bot Help',
             description='**ranked [riot_id]**',
             color=globals.embed_color
         )
@@ -94,7 +93,7 @@ class Help(commands.Cog):
     @help.command(aliases=['h', 'hist'])
     async def history(self, ctx):
         # create the embed
-        embed=discord.Embed(title='Valorant Bot Help',
+        embed = discord.Embed(title='Valorant Bot Help',
             description='**history [riot_id] {number}**',
             color=globals.embed_color
         )
@@ -121,7 +120,7 @@ class Help(commands.Cog):
     @help.command(aliases=['n', 'pn'])
     async def notes(self, ctx):
         # create the embed
-        embed=discord.Embed(title='Valorant Bot Help',
+        embed = discord.Embed(title='Valorant Bot Help',
             description='**notes**',
             color=globals.embed_color
         )
@@ -146,7 +145,7 @@ class Help(commands.Cog):
     @help.command()
     async def learn(self, ctx):
         # create the embed
-        embed=discord.Embed(title='Valorant Bot Help',
+        embed = discord.Embed(title='Valorant Bot Help',
             description='**learn [topic]**',
             color=globals.embed_color
         )
