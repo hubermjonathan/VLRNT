@@ -1,2 +1,2 @@
-web: gunicorn image_hoster:app
+web: gunicorn asset_hoster:app
 worker: python bot.py

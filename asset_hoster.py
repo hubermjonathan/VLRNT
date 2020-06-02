@@ -1,6 +1,9 @@
 import os
 from flask import Flask, send_file
 app = Flask(__name__)
+@app.route('/riot.txt')
+def send_verification():
+	return send_file('assets/riot.txt', mimetype='text/plain')
 @app.route('/<image>')
 def send_image(image):
 	return send_file(f'assets/{image}.png', mimetype='image/gif')
