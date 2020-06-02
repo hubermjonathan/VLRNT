@@ -21,6 +21,7 @@ class History(commands.Cog):
                     f'Score: {game["kills"]}/{game["deaths"]}\n',
                 inline=False
             )
+        embed.set_footer(text='Because the VALORANT API is still in development, no real data is used for this command.')
 
         # send the message
         await ctx.send(embed=embed)
@@ -34,6 +35,7 @@ class History(commands.Cog):
                 f'Score: {game["kills"]}/{game["deaths"]}\n',
             inline=False
         )
+        embed.set_footer(text='Because the VALORANT API is still in development, no real data is used for this command.')
 
         # send the message
         await ctx.send(embed=embed)
