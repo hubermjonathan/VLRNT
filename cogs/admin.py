@@ -19,7 +19,7 @@ class Admin(commands.Cog):
             user = await self.bot.fetch_user(self.bot.owner_id)
             await user.send(f'Bot ready at {datetime.now().time()}')
 
-    @commands.command()
+    @commands.command(aliases=['l'])
     @commands.is_owner()
     async def load(self, ctx, cog):
         # reload the extension
@@ -32,7 +32,7 @@ class Admin(commands.Cog):
         # acknowledge the command
         await ctx.message.add_reaction('👍')
 
-    @commands.command()
+    @commands.command(aliases=['ul'])
     @commands.is_owner()
     async def unload(self, ctx, cog):
         # reload the extension
@@ -45,7 +45,7 @@ class Admin(commands.Cog):
         # acknowledge the command
         await ctx.message.add_reaction('👍')
 
-    @commands.command()
+    @commands.command(aliases=['rl'])
     @commands.is_owner()
     async def reload(self, ctx, cog):
         # reload the extension
