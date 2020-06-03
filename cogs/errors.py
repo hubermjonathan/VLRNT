@@ -25,11 +25,11 @@ class Errors(commands.Cog):
         elif isinstance(error, commands.PrivateMessageOnly):
             return
         elif isinstance(error, commands.MissingRequiredArgument):
-            await ctx.send(embed=discord.Embed(title='Error', description=f'See `val help {ctx.command}` for correct command usage', color=globals.embed_color))
+            await ctx.send(embed=discord.Embed(title='Error', description=f'See `val help {ctx.command}` for correct command usage.', color=globals.embed_color))
         elif isinstance(error, commands.ArgumentParsingError):
-            await ctx.send(embed=discord.Embed(title='Error', description=f'See `val help {ctx.command}` for correct command usage', color=globals.embed_color))
+            await ctx.send(embed=discord.Embed(title='Error', description=f'See `val help {ctx.command}` for correct command usage.', color=globals.embed_color))
         elif isinstance(error, commands.TooManyArguments):
-            await ctx.send(embed=discord.Embed(title='Error', description=f'See `val help {ctx.command}` for correct command usage', color=globals.embed_color))
+            await ctx.send(embed=discord.Embed(title='Error', description=f'See `val help {ctx.command}` for correct command usage.', color=globals.embed_color))
         elif isinstance(error, commands.BadArgument):
             await ctx.send(embed=discord.Embed(title='Error', description=f'{error}', color=globals.embed_color))
         else:

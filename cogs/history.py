@@ -23,9 +23,9 @@ class History(commands.Cog):
             elif len(args) == 2:
                 try:
                     if int(args[1]) < 1 or int(args[1]) > 3:
-                        raise commands.BadArgument('Provide a valid match number')
+                        raise commands.BadArgument('Provide a valid match number.')
                 except ValueError:
-                    raise commands.BadArgument('Provide a valid match number')
+                    raise commands.BadArgument('Provide a valid match number.')
 
             # TODO verify riot id
 
