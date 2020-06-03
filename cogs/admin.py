@@ -23,6 +23,8 @@ class Admin(commands.Cog):
         # get the number of users
         members = []
         for g in self.bot.guilds:
+            if g.id == 110373943822540800 or g.id == 264445053596991498:
+                continue
             for m in g.members:
                 if not m.bot and m.id not in members:
                     members.append(m.id)

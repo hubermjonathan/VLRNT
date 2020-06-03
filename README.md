@@ -1,6 +1,6 @@
 # VLRNT
 **v0.0.7** <img src="https://hubermjonathan-vlrnt.herokuapp.com/icon" align="right" alt="icon" width="200px" height="200px"></br>
-VLRNT provides VALORANT statistics, agent information, arrow/smoke lineups, and more to your Discord server!</br>
+VLRNT provides VALORANT statistics (coming soon), agent information, patch notes, and more to your Discord server!</br>
 [author](#author)
 
 ### invite the bot to your server!
@@ -17,9 +17,6 @@ VLRNT provides VALORANT statistics, agent information, arrow/smoke lineups, and 
 **scouting** - scout out your opponents for a match</br>
 **agent stats** - get stats about agents</br>
 **match history** - get insights on your match history, with round by round analysis</br>
-**arrows** - get locations for Sova arrows</br>
-**inhouses** - discord support for inhouses</br>
-**roulette** - get fun, random strategies to try out</br>
 ### version history
 **v0.0.7** - added spike rush stats skeleton</br>
 **v0.0.6** - added tier list</br>
