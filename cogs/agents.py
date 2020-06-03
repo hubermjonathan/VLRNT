@@ -12,6 +12,7 @@ class Agents(commands.Cog):
         self.bot = bot
 
     @commands.group(case_insensitive=True)
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def agents(self, ctx):
         if ctx.invoked_subcommand is None:
             # create the embed
@@ -29,6 +30,7 @@ class Agents(commands.Cog):
             await ctx.send(embed=embed)
 
     @agents.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def jett(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -61,6 +63,7 @@ class Agents(commands.Cog):
         await ctx.send(embed=embed)
 
     @agents.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def raze(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -93,6 +96,7 @@ class Agents(commands.Cog):
         await ctx.send(embed=embed)
 
     @agents.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def breach(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -125,6 +129,7 @@ class Agents(commands.Cog):
         await ctx.send(embed=embed)
 
     @agents.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def omen(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -157,6 +162,7 @@ class Agents(commands.Cog):
         await ctx.send(embed=embed)
 
     @agents.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def brimstone(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -189,6 +195,7 @@ class Agents(commands.Cog):
         await ctx.send(embed=embed)
 
     @agents.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def phoenix(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -221,6 +228,7 @@ class Agents(commands.Cog):
         await ctx.send(embed=embed)
 
     @agents.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def sage(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -253,6 +261,7 @@ class Agents(commands.Cog):
         await ctx.send(embed=embed)
 
     @agents.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def sova(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -285,6 +294,7 @@ class Agents(commands.Cog):
         await ctx.send(embed=embed)
 
     @agents.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def viper(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -317,6 +327,7 @@ class Agents(commands.Cog):
         await ctx.send(embed=embed)
 
     @agents.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def cypher(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -349,6 +360,7 @@ class Agents(commands.Cog):
         await ctx.send(embed=embed)
 
     @agents.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def reyna(self, ctx):
         # create the embed
         embed = discord.Embed(

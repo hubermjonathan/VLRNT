@@ -11,6 +11,7 @@ class Help(commands.Cog):
         self.bot = bot
 
     @commands.group()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def help(self, ctx):
         if ctx.invoked_subcommand is None:
             # create the embed
@@ -41,6 +42,7 @@ class Help(commands.Cog):
             await ctx.send(embed=embed)
 
     @help.command(aliases=['u', 'ur'])
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def unrated(self, ctx):
         # create the embed
         embed = discord.Embed(title='Valorant Bot Help',
@@ -67,6 +69,7 @@ class Help(commands.Cog):
         await ctx.send(embed=embed)
 
     @help.command(aliases=['r'])
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def ranked(self, ctx):
         # create the embed
         embed = discord.Embed(title='Valorant Bot Help',
@@ -93,6 +96,7 @@ class Help(commands.Cog):
         await ctx.send(embed=embed)
 
     @help.command(aliases=['s'])
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def scout(self, ctx):
         # create the embed
         embed = discord.Embed(title='Valorant Bot Help',
@@ -119,6 +123,7 @@ class Help(commands.Cog):
         await ctx.send(embed=embed)
 
     @help.command(aliases=['h', 'hist'])
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def history(self, ctx):
         # create the embed
         embed = discord.Embed(title='Valorant Bot Help',
@@ -146,6 +151,7 @@ class Help(commands.Cog):
         await ctx.send(embed=embed)
 
     @help.command(aliases=['n', 'pn'])
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def notes(self, ctx):
         # create the embed
         embed = discord.Embed(title='Valorant Bot Help',
@@ -171,6 +177,7 @@ class Help(commands.Cog):
         await ctx.send(embed=embed)
 
     @help.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def agents(self, ctx):
         # create the embed
         embed = discord.Embed(title='Valorant Bot Help',
@@ -197,6 +204,7 @@ class Help(commands.Cog):
         await ctx.send(embed=embed)
 
     @help.command(aliases=['arw'])
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def arrows(self, ctx):
         # create the embed
         embed = discord.Embed(title='Valorant Bot Help',

@@ -11,6 +11,7 @@ class Arrows(commands.Cog):
         self.bot = bot
 
     @commands.group(aliases=['arw'], case_insensitive=True)
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def arrows(self, ctx):
         if ctx.invoked_subcommand is None:
             # create the embed
@@ -29,6 +30,7 @@ class Arrows(commands.Cog):
             await ctx.send(embed=embed)
 
     @arrows.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def bind(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -45,6 +47,7 @@ class Arrows(commands.Cog):
         await ctx.send(embed=embed)
 
     @arrows.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def haven(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -61,6 +64,7 @@ class Arrows(commands.Cog):
         await ctx.send(embed=embed)
 
     @arrows.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def split(self, ctx):
         # create the embed
         embed = discord.Embed(
@@ -77,6 +81,7 @@ class Arrows(commands.Cog):
         await ctx.send(embed=embed)
 
     @arrows.command()
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def ascent(self, ctx):
         # create the embed
         embed = discord.Embed(

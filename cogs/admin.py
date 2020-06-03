@@ -13,16 +13,9 @@ class Admin(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.Cog.listener()
-    async def on_ready(self):
-        # message owner
-        if os.getenv('DEV') is not None:
-            print('BOT STATUS: ready')
-            user = await self.bot.fetch_user(self.bot.owner_id)
-            await user.send(embed=discord.Embed(title='Bot ready', description=datetime.now().strftime("%H:%M:%S"), color=globals.embed_color))
-
     @commands.command()
     @commands.is_owner()
+    @commands.dm_only()
     async def stats(self, ctx):
         # get the number of guilds
         num_guilds = len(self.bot.guilds)
@@ -40,12 +33,14 @@ class Admin(commands.Cog):
 
     @commands.command()
     @commands.is_owner()
+    @commands.dm_only()
     async def cogs(self, ctx):
         # send the message
         await ctx.author.send(embed=discord.Embed(title='Cogs', description=', '.join(self.bot.cogs), color=globals.embed_color))
 
     @commands.command()
     @commands.is_owner()
+    @commands.dm_only()
     async def load(self, ctx, cog):
         # reload the extension
         try:
@@ -59,6 +54,7 @@ class Admin(commands.Cog):
 
     @commands.command()
     @commands.is_owner()
+    @commands.dm_only()
     async def unload(self, ctx, cog):
         # reload the extension
         try:
@@ -72,6 +68,7 @@ class Admin(commands.Cog):
 
     @commands.command(aliases=['rl'])
     @commands.is_owner()
+    @commands.dm_only()
     async def reload(self, ctx, cog):
         # reload the extension
         try:

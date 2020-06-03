@@ -41,6 +41,7 @@ class History(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command(aliases=['h', 'hist'])
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def history(self, ctx, *args):
         # verify args
         if len(args) == 0:

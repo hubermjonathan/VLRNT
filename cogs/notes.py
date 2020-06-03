@@ -14,6 +14,7 @@ class Notes(commands.Cog):
         self.bot = bot
 
     @commands.command(aliases=['n', 'pn'])
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def notes(self, ctx):
         # get the patch notes
         r = requests.get('https://playvalorant.com/en-us/news/')

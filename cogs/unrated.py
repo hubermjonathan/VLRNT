@@ -11,6 +11,7 @@ class Unrated(commands.Cog):
         self.bot = bot
 
     @commands.command(aliases=['u', 'ur'])
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def unrated(self, ctx, riot_id):
         # TODO verify riot id
         if False:

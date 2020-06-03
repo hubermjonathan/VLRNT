@@ -11,6 +11,7 @@ class Ranked(commands.Cog):
         self.bot = bot
 
     @commands.command(aliases=['r'])
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
     async def ranked(self, ctx, riot_id):
         # TODO verify riot id
         if False:
