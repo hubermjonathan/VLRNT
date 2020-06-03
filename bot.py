@@ -9,7 +9,7 @@ if os.getenv('DEV') is not None:
     load_dotenv('.env')
 
 # create the bot
-bot = commands.Bot(owner_id=int(os.getenv('OWNER_ID')),
+bot = commands.Bot(owner_id=196141424318611457,
                    command_prefix=commands.when_mentioned_or('val '),
                    activity=discord.Activity(type=discord.ActivityType.listening, name=f'val help | {globals.version_number}'))
 bot.remove_command('help')

@@ -15,9 +15,9 @@ class History(commands.Cog):
         embed = discord.Embed(title=riot_id, description='Match History', color=globals.embed_color)
         for i, game in enumerate(games):
             embed.add_field(name=f'**Game {i+1}**',
-                value=f'**{game["map"]} - {game["result"]}**\n' \
-                    f'{game["score"]}\n' \
-                    f'Combat Score: {game["avg_combat_score"]}\n' \
+                value=f'**{game["map"]} - {game["result"]}**\n'
+                    f'{game["score"]}\n'
+                    f'Combat Score: {game["avg_combat_score"]}\n'
                     f'Score: {game["kills"]}/{game["deaths"]}\n',
                 inline=False
             )
@@ -30,8 +30,8 @@ class History(commands.Cog):
         # create the embed
         embed = discord.Embed(title=riot_id, color=globals.embed_color)
         embed.add_field(name=f'**{game["map"]} - {game["result"]}**\n',
-            value=f'{game["score"]}\n' \
-                f'Combat Score: {game["avg_combat_score"]}\n' \
+            value=f'{game["score"]}\n'
+                f'Combat Score: {game["avg_combat_score"]}\n'
                 f'Score: {game["kills"]}/{game["deaths"]}\n',
             inline=False
         )
@@ -56,8 +56,6 @@ class History(commands.Cog):
                 raise commands.BadArgument('Provide a valid match number')
 
         # TODO verify riot id
-        if False:
-            raise commands.BadArgument('Provide a valid Riot ID')
 
         # TODO gather the data
         games = [
@@ -89,8 +87,8 @@ class History(commands.Cog):
 
         if len(args) == 1:
             # send full match history
-            await self.get_match_history(ctx, args[0], games)
+            await self.get_match_history(ctx, args[0], None)
         else:
             # send single game information
-            await self.get_single_game(ctx, args[0], games[int(args[1])-1])
+            await self.get_single_game(ctx, args[0], None)
 
