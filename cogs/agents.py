@@ -18,7 +18,7 @@ class Agents(commands.Cog):
             # create the embed
             embed = discord.Embed(
                 title='Which agent would you like to learn about?',
-                description='Use `val agents [agent_name]` to choose an agent from the following.\n',
+                description='Use `val?agents [agent_name]` to choose an agent from the following.\n',
                 color=globals.embed_color
             )
             embed.add_field(name='**Agents**',

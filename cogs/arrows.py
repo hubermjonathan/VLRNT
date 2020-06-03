@@ -17,7 +17,7 @@ class Arrows(commands.Cog):
             # create the embed
             embed = discord.Embed(
                 title='Which map?',
-                description='Use `val arrows [map_name]` to choose a map from the following.\n',
+                description='Use `val?arrows [map_name]` to choose a map from the following.\n',
                 color=globals.embed_color
             )
             embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/sova')

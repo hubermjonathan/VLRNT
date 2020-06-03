@@ -42,7 +42,7 @@ class Tiers(commands.Cog):
                     rankings = rankings + f'**{i+1}:** {agent[0]} ({agent[1]})\n'
 
                 # create the embed
-                embed = discord.Embed(title='Community Tier List', description='To submit your vote, use `val tiers vote`.', color=globals.embed_color)
+                embed = discord.Embed(title='Community Tier List', description='To submit your vote, use `val?tiers vote`.', color=globals.embed_color)
                 embed.set_thumbnail(url=f'https://hubermjonathan-vlrnt.herokuapp.com/{agents[0][0].lower()}')
                 embed.add_field(name='**Agents**',
                     value=rankings,
@@ -92,9 +92,9 @@ class Tiers(commands.Cog):
             embed = discord.Embed(
                 title='Community Tier List',
                 description='Vote for the 3 agents who you think are the **strongest** using the following format:\n'
-                    '`val tiers vote [agent_name] [agent_name] [agent_name]`\n'
+                    '`val?tiers vote [agent_name] [agent_name] [agent_name]`\n'
                     '\nDo not include the [] in your command. The first agent listed is your first place and the last one is third place.\n'
-                    '\nExample: `val tiers vote Sova Reyna Raze`',
+                    '\nExample: `val?tiers vote Sova Reyna Raze`',
                 color=globals.embed_color
             )
 

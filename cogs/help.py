@@ -16,7 +16,7 @@ class Help(commands.Cog):
         if ctx.invoked_subcommand is None:
             # create the embed
             embed = discord.Embed(title='Valorant Bot Help',
-                description='Use `val help {command}` for more information about a specific command.\n'
+                description='Use `val?help {command}` for more information about a specific command.\n'
                     '[] indicates a required argument and {} indicates an optional one. Do not include these in the commands.\n',
                 color=globals.embed_color
             )
