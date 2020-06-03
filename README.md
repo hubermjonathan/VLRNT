@@ -4,7 +4,7 @@ VLRNT provides VALORANT statistics, agent information, arrow/smoke lineups, and 
 [author](#author)
 
 ### invite the bot to your server!
-[click here](https://discordapp.com/oauth2/authorize?client_id=717125416858550322&permissions=51200&scope=bot)
+[click here](https://discordapp.com/oauth2/authorize?client_id=717125416858550322&permissions=18432&scope=bot)
 ### current features
 **patch notes** - get the latest patch notes</br>
 **agents** - get information about the agents</br>
