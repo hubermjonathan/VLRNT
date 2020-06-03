@@ -22,15 +22,16 @@ class Help(commands.Cog):
             )
             embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/icon')
             embed.add_field(name='**Available Commands**',
-                value='`help {command}` - Help messages\n'
-                    '`unrated [riot_id]` - Unrated stats\n'
-                    '`ranked [riot_id]` - Ranked stats\n'
-                    '`scout [riot_id]` - Current game\n'
-                    '`history [riot_id] {number}` - Match history\n'
-                    '`notes` - Latest patch notes\n'
-                    '`tiers {vote [agent] [agent] [agent]}` - Tier list\n'
-                    '`agents [agent]` - Agent information\n'
-                    '`arrows [map]` - Sova arrows\n',
+                value='Help messages - `help {command}`\n'
+                    'Unrated stats - `unrated [riot_id]`\n'
+                    'Ranked stats - `ranked [riot_id]`\n'
+                    'Spike rush stats - `spikerush [riot_id]`\n'
+                    'Current game - `scout [riot_id]`\n'
+                    'Match history - `history [riot_id] {number}`\n'
+                    'Latest patch notes - `notes`\n'
+                    'Tier list - `tiers {vote [agent] [agent] [agent]}`\n'
+                    'Agent information - `agents [agent]`\n'
+                    'Sova arrows - `arrows [map]`\n',
                 inline=False
             )
             embed.add_field(name='**Owner**',
@@ -89,6 +90,33 @@ class Help(commands.Cog):
         )
         embed.add_field(name='**Description**',
             value='Returns an overview of stats for a user for the ranked gamemode.',
+            inline=False
+        )
+        embed.set_footer(text=globals.version_number)
+
+        # send the message
+        await ctx.send(embed=embed)
+
+    @help.command(aliases=['sr'])
+    @commands.bot_has_permissions(send_messages=True, embed_links=True)
+    async def spikerush(self, ctx):
+        # create the embed
+        embed = discord.Embed(title='Valorant Bot Help',
+            description='`spikerush [riot_id]`',
+            color=globals.embed_color
+        )
+        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/icon')
+        embed.add_field(name='**Aliases**',
+            value='sr\n',
+            inline=False
+        )
+        embed.add_field(name='**Arguments**',
+            value='**spikerush** [Required] - Command group\n'
+                '**riot_id** [Required] - The Riot ID of the user to return stats for\n',
+            inline=False
+        )
+        embed.add_field(name='**Description**',
+            value='Returns an overview of stats for a user for the spike rush gamemode.',
             inline=False
         )
         embed.set_footer(text=globals.version_number)
