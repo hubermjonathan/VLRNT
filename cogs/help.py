@@ -16,19 +16,19 @@ class Help(commands.Cog):
         if ctx.invoked_subcommand is None:
             # create the embed
             embed = discord.Embed(title='Valorant Bot Help',
-                description='Use **val help {command}** for more information about a specific command.\n' \
+                description='Use **val help {command}** for more information about a specific command.\n'
                     '[] indicates a required argument and {} indicates an optional one. Do not include these in the commands.\n',
                 color=globals.embed_color
             )
             embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/icon')
             embed.add_field(name='**Available Commands**',
-                value='**help {command}** - Help messages\n' \
-                    '**unrated [riot_id]** - Unrated stats\n' \
-                    '**ranked [riot_id]** - Ranked stats\n' \
-                    '**scout [riot_id]** - Current game\n' \
-                    '**history [riot_id] {number}** - Match history\n' \
-                    '**notes** - Latest patch notes\n' \
-                    '**agents [agent_name]** - Agent information\n' \
+                value='**help {command}** - Help messages\n'
+                    '**unrated [riot_id]** - Unrated stats\n'
+                    '**ranked [riot_id]** - Ranked stats\n'
+                    '**scout [riot_id]** - Current game\n'
+                    '**history [riot_id] {number}** - Match history\n'
+                    '**notes** - Latest patch notes\n'
+                    '**agents [agent_name]** - Agent information\n'
                     '**arrows [map_name]** - Sova arrows\n',
                 inline=False
             )
@@ -55,7 +55,7 @@ class Help(commands.Cog):
             inline=False
         )
         embed.add_field(name='**Arguments**',
-            value='**unrated** - [Required] Command group\n' \
+            value='**unrated** - [Required] Command group\n'
                 '**riot_id** - [Required] The Riot ID of the user to return stats for\n',
             inline=False
         )
@@ -82,7 +82,7 @@ class Help(commands.Cog):
             inline=False
         )
         embed.add_field(name='**Arguments**',
-            value='**ranked** - [Required] Command group\n' \
+            value='**ranked** - [Required] Command group\n'
                 '**riot_id** - [Required] The Riot ID of the user to return stats for\n',
             inline=False
         )
@@ -109,7 +109,7 @@ class Help(commands.Cog):
             inline=False
         )
         embed.add_field(name='**Arguments**',
-            value='**scout** - [Required] Command group\n' \
+            value='**scout** - [Required] Command group\n'
                 '**riot_id** - [Required] The Riot ID of the user to return stats for\n',
             inline=False
         )
@@ -136,8 +136,8 @@ class Help(commands.Cog):
             inline=False
         )
         embed.add_field(name='**Arguments**',
-            value='**history** - [Required] Command group\n' \
-                '**riot_id** - [Required] The Riot ID of the user to return stats for\n' \
+            value='**history** - [Required] Command group\n'
+                '**riot_id** - [Required] The Riot ID of the user to return stats for\n'
                 '**number** - {Optional} The match number to get more details for\n',
             inline=False
         )
@@ -190,7 +190,7 @@ class Help(commands.Cog):
             inline=False
         )
         embed.add_field(name='**Arguments**',
-            value='**agents** - [Required] Command group\n' \
+            value='**agents** - [Required] Command group\n'
                 '**agent_name** - [Required] The agent to get information for\n',
             inline=False
         )
@@ -217,7 +217,7 @@ class Help(commands.Cog):
             inline=False
         )
         embed.add_field(name='**Arguments**',
-            value='**arrows** - [Required] Command group\n' \
+            value='**arrows** - [Required] Command group\n'
                 '**map_name** - [Required] The map name to get Sova arrows for\n',
             inline=False
         )
