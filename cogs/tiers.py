@@ -106,9 +106,12 @@ class Tiers(commands.Cog):
             # remove old votes
             if self.redis.get(ctx.author.id) is not None:
                 old_votes = tuple(map(str, self.redis.get(ctx.author.id).decode('utf-8').split(' ')))
-                self.redis.set(str(old_votes[0]).lower(), int(self.redis.get(str(old_votes[0]).lower()))-7)
-                self.redis.set(str(old_votes[1]).lower(), int(self.redis.get(str(old_votes[1]).lower()))-3)
-                self.redis.set(str(old_votes[2]).lower(), int(self.redis.get(str(old_votes[2]).lower()))-1)
+                new_votes = int(self.redis.get(str(old_votes[0]).lower()))-7
+                self.redis.set(str(old_votes[0]).lower(), new_votes if new_votes > 0 else 0)
+                new_votes = int(self.redis.get(str(old_votes[1]).lower()))-3
+                self.redis.set(str(old_votes[1]).lower(), new_votes if new_votes > 0 else 0)
+                new_votes = int(self.redis.get(str(old_votes[2]).lower()))-1
+                self.redis.set(str(old_votes[2]).lower(), new_votes if new_votes > 0 else 0)
 
             # submit votes
             self.redis.set(str(args[0]).lower(), int(self.redis.get(str(args[0]).lower()))+7)
