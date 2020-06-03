@@ -18,7 +18,7 @@ class SpikeRush(commands.Cog):
 
             # create the embed
             embed = discord.Embed(title=riot_id, description='Spike Rush Stats', color=globals.embed_color)
-            embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/reyna')
+            embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/reyna')
             embed.add_field(name='**Games**',
                 value=f'**Games Played:** {35+31}\n'
                     f'**Games Won:** {35}\n'

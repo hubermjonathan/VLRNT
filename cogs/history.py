@@ -52,7 +52,7 @@ class History(commands.Cog):
                 # create the embed
                 embed = discord.Embed(title=args[0], color=globals.embed_color)
                 map = random.choice(["Bind", "Haven", "Split", "Ascent"])
-                embed.set_thumbnail(url=f'https://hubermjonathan-vlrnt.herokuapp.com/{map}')
+                embed.set_thumbnail(url=f'http://assets.hubermjonathan.com/vlrnt/{map}')
                 embed.add_field(name=f'**{map} - {random.choice(["Victory", "Defeat"])}**\n',
                     value=f'{random.choice(["13-12", "7-13", "13-10", "13-4", "9-13"])}\n'
                         f'Combat Score: {random.randrange(200, 400)}\n'

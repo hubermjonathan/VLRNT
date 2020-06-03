@@ -20,7 +20,7 @@ class Arrows(commands.Cog):
                 description='Use `val?arrows [map_name]` to choose a map from the following.\n',
                 color=globals.embed_color
             )
-            embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/sova')
+            embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/sova')
             embed.add_field(name='**Maps**',
                 value='Bind, Haven, Split, Ascent',
                 inline=False
@@ -37,7 +37,7 @@ class Arrows(commands.Cog):
             title='Sova Arrows for Bind',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/sova')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/sova')
         embed.add_field(name='**Coming Soon**',
             value='The bot owner is currently gathering arrow locations and will update this feature soon.',
             inline=False
@@ -54,7 +54,7 @@ class Arrows(commands.Cog):
             title='Sova Arrows for Haven',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/sova')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/sova')
         embed.add_field(name='**Coming Soon**',
             value='The bot owner is currently gathering arrow locations and will update this feature soon.',
             inline=False
@@ -71,7 +71,7 @@ class Arrows(commands.Cog):
             title='Sova Arrows for Split',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/sova')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/sova')
         embed.add_field(name='**Coming Soon**',
             value='The bot owner is currently gathering arrow locations and will update this feature soon.',
             inline=False
@@ -88,7 +88,7 @@ class Arrows(commands.Cog):
             title='Sova Arrows for Ascent',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/sova')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/sova')
         embed.add_field(name='**Coming Soon**',
             value='The bot owner is currently gathering arrow locations and will update this feature soon.',
             inline=False

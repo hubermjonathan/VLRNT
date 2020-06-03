@@ -1,5 +1,5 @@
 # VLRNT
-**v0.0.7** <img src="https://hubermjonathan-vlrnt.herokuapp.com/icon" align="right" alt="icon" width="200px" height="200px"></br>
+**v0.0.7** <img src="http://assets.hubermjonathan.com/vlrnt/icon" align="right" alt="icon" width="200px" height="200px"></br>
 VLRNT provides VALORANT statistics (coming soon), agent information, patch notes, and more to your Discord server!</br>
 [author](#author)
 

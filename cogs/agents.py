@@ -37,7 +37,7 @@ class Agents(commands.Cog):
             title='Jett',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/jett')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/jett')
         embed.add_field(name='**Q - Updraft**',
             value='INSTANTLY propel Jett high into the air.',
             inline=False
@@ -70,7 +70,7 @@ class Agents(commands.Cog):
             title='Raze',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/raze')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/raze')
         embed.add_field(name='**Q - Blast Pack**',
             value='INSTANTLY throw a Blast Pack that will stick to surfaces. RE-USE the ability after deployment to detonate, damaging and moving anything hit. Raze isn\'t damaged by this ability, but will still take fall damage if launched up far enough.',
             inline=False
@@ -103,7 +103,7 @@ class Agents(commands.Cog):
             title='Breach',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/breach')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/breach')
         embed.add_field(name='**Q - Flashpoint**',
             value='EQUIP a blinding charge. FIRE the charge to set fast-acting burst through the wall. The charge detonates to blind all players looking at it.',
             inline=False
@@ -136,7 +136,7 @@ class Agents(commands.Cog):
             title='Omen',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/omen')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/omen')
         embed.add_field(name='**Q - Paranoia**',
             value='INSTANTLY fire a shadow projectile forward, briefly reducing the vision range of all players it touches. This projectile can pass straight through walls.',
             inline=False
@@ -169,7 +169,7 @@ class Agents(commands.Cog):
             title='Brimstone',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/brimstone')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/brimstone')
         embed.add_field(name='**Q - Incendiary**',
             value='EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.',
             inline=False
@@ -202,7 +202,7 @@ class Agents(commands.Cog):
             title='Phoenix',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/phoenix')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/phoenix')
         embed.add_field(name='**Q - Curveball**',
             value='EQUIP a flare orb that takes a curving path and detonates shortly after throwing. FIRE to curve the flare orb to the left, detonating and blinding any player who sees the orb. ALTERNATE FIRE to curve the flare orb to the right.',
             inline=False
@@ -235,7 +235,7 @@ class Agents(commands.Cog):
             title='Sage',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/sage')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/sage')
         embed.add_field(name='**Q - Slow Orb**',
             value='EQUIP a slowing orb. FIRE to throw a slowing orb forward that detonates upon landing, creating a lingering field that slows players caught inside of it.',
             inline=False
@@ -268,7 +268,7 @@ class Agents(commands.Cog):
             title='Sova',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/sova')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/sova')
         embed.add_field(name='**Q - Shock Bolt**',
             value='EQUIP a bow with a shock bolt. FIRE to send the explosive forward, detonating upon collision and damaging players nearby. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.',
             inline=False
@@ -301,7 +301,7 @@ class Agents(commands.Cog):
             title='Viper',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/viper')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/viper')
         embed.add_field(name='**Q - Poison Cloud**',
             value='EQUIP a gas emitter. FIRE to throw the emitter that perpetually remains throughout the round. RE-USE the ability to create a toxic gas cloud at the cost of fuel. This ability can be RE-USED more than once and can be picked up to be REDEPLOYED.',
             inline=False
@@ -334,7 +334,7 @@ class Agents(commands.Cog):
             title='Cypher',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/cypher')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/cypher')
         embed.add_field(name='**Q - Cyber Cage**',
             value='INSTANTLY toss the cyber cage in front of Cypher. Activate to create a zone that blocks vision and slows enemies who pass through it.',
             inline=False
@@ -367,7 +367,7 @@ class Agents(commands.Cog):
             title='Reyna',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='https://hubermjonathan-vlrnt.herokuapp.com/reyna')
+        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/reyna')
         embed.add_field(name='**Q - Devour**',
             value='Enemies killed by Reyna leave behind Soul Orbs that last 3 seconds. INSTANTLY consume a nearby soul orb, rapidly healing for a short duration. Health gained through this skill exceeding 100 will decay over time. If EMPRESS is active, this skill will automatically cast and not consume the orb.',
             inline=False

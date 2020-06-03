@@ -43,7 +43,7 @@ class Tiers(commands.Cog):
 
                 # create the embed
                 embed = discord.Embed(title='Community Tier List', description='To submit your vote, use `val?tiers vote`.', color=globals.embed_color)
-                embed.set_thumbnail(url=f'https://hubermjonathan-vlrnt.herokuapp.com/{agents[0][0].lower()}')
+                embed.set_thumbnail(url=f'http://assets.hubermjonathan.com/vlrnt/{agents[0][0].lower()}')
                 embed.add_field(name='**Agents**',
                     value=rankings,
                     inline=True
