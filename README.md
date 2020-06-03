@@ -1,5 +1,5 @@
 # VLRNT
-**v0.0.5** <img src="https://hubermjonathan-vlrnt.herokuapp.com/icon" align="right" alt="icon" width="200px" height="200px"></br>
+**v0.0.6** <img src="https://hubermjonathan-vlrnt.herokuapp.com/icon" align="right" alt="icon" width="200px" height="200px"></br>
 VLRNT provides VALORANT statistics, agent information, arrow/smoke lineups, and more to your Discord server!</br>
 [author](#author)
 
@@ -8,6 +8,7 @@ VLRNT provides VALORANT statistics, agent information, arrow/smoke lineups, and 
 ### current features
 **patch notes** - get the latest patch notes</br>
 **agents** - get information about the agents</br>
+**tier list** - view and vote on a community tier list of agents</br>
 **stats skeleton** - get a preview of what stat tracking will look like once the VALORANT API is released</br>
 ### upcoming features
 **unrated stats** - get stats for unrated</br>
@@ -19,6 +20,7 @@ VLRNT provides VALORANT statistics, agent information, arrow/smoke lineups, and 
 **inhouses** - discord support for inhouses</br>
 **roulette** - get fun, random strategies to try out</br>
 ### version history
+**v0.0.6** - added tier list</br>
 **v0.0.5** - added scouting skeleton</br>
 **v0.0.4** - added agent information</br>
 **v0.0.3** - added latest patch notes</br>

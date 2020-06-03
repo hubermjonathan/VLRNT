@@ -20,6 +20,7 @@ mccabe==0.6.1
 multidict==4.7.6
 pylint==2.5.2
 python-dotenv==0.13.0
+redis==3.5.3
 requests==2.23.0
 six==1.15.0
 soupsieve==2.0.1
