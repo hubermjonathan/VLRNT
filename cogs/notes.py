@@ -20,16 +20,18 @@ class Notes(commands.Cog):
         r = requests.get('https://playvalorant.com/en-us/news/')
         soup = BeautifulSoup(r.content, 'html.parser')
         for a in soup.find_all('a', href=True):
-            if 'game-updates/valorant-patch-notes' in a["href"]:
-                notes = f'https://playvalorant.com{a["href"]}'
+            if 'game-updates/valorant-patch-notes' in a.get('href') and 'news-card' not in a.parent.get('class'):
+                notes = f'https://playvalorant.com{a.get("href")}'
+                print(notes)
                 break
 
         # get the highlights
         r = requests.get(notes)
         soup = BeautifulSoup(r.content, 'html.parser')
-        for a in soup.find_all('a', href=True):
-            if 'patchnotes' in a["href"]:
-                highlights = a["href"]
+        for img in soup.find_all('img'):
+            if 'Patch_Notes' in img.get('alt'):
+                highlights = img.get('src')
+                print(highlights)
                 break
 
         # create the embed
