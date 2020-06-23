@@ -22,7 +22,6 @@ class Notes(commands.Cog):
         for a in soup.find_all('a', href=True):
             if 'game-updates/valorant-patch-notes' in a.get('href') and 'news-card' not in a.parent.get('class'):
                 notes = f'https://playvalorant.com{a.get("href")}'
-                print(notes)
                 break
 
         # get the highlights
@@ -31,7 +30,6 @@ class Notes(commands.Cog):
         for img in soup.find_all('img'):
             if 'Patch_Notes' in img.get('alt'):
                 highlights = img.get('src')
-                print(highlights)
                 break
 
         # create the embed
