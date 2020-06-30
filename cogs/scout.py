@@ -18,7 +18,7 @@ class Scout(commands.Cog):
 
             # create the embed
             embed = discord.Embed(title=riot_id, description='Scout Data', color=globals.embed_color)
-            embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/haven')
+            embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/haven')
             embed.add_field(name='**Your Team**',
                 value=f'**Player 1 - Sage (Iron 3):** 53% W/L - 0.87 K/D\n'
                     f'**Player 2 - Sova (Iron 2):**  56% W/L - 1.05 K/D\n'

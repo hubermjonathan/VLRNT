@@ -20,7 +20,7 @@ class Vote(commands.Cog):
                 url='https://top.gg/bot/717125416858550322',
                 color=globals.embed_color
             )
-            embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/icon')
+            embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/icon')
 
             # send the message
             await ctx.send(embed=embed)

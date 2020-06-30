@@ -18,7 +18,7 @@ class Unrated(commands.Cog):
 
             # create the embed
             embed = discord.Embed(title=riot_id, description='Unrated Stats', color=globals.embed_color)
-            embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/sova')
+            embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/sova')
             embed.add_field(name='**Games**',
                 value=f'**Games Played:** {35+31}\n'
                     f'**Games Won:** {35}\n'

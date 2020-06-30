@@ -20,7 +20,7 @@ class Help(commands.Cog):
                     '[] indicates a required argument and {} indicates an optional one. Do not include these in the commands.\n',
                 color=globals.embed_color
             )
-            embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/icon')
+            embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/icon')
             embed.add_field(name='**Available Commands**',
                 value='Help messages - `help {command}`\n'
                     'Unrated stats - `unrated [riot_id]`\n'
@@ -51,7 +51,7 @@ class Help(commands.Cog):
             description='`unrated [riot_id]`',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/icon')
+        embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/icon')
         embed.add_field(name='**Aliases**',
             value='u, ur\n',
             inline=False
@@ -78,7 +78,7 @@ class Help(commands.Cog):
             description='`ranked [riot_id]`',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/icon')
+        embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/icon')
         embed.add_field(name='**Aliases**',
             value='r\n',
             inline=False
@@ -105,7 +105,7 @@ class Help(commands.Cog):
             description='`spikerush [riot_id]`',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/icon')
+        embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/icon')
         embed.add_field(name='**Aliases**',
             value='sr\n',
             inline=False
@@ -132,7 +132,7 @@ class Help(commands.Cog):
             description='`scout [riot_id]`',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/icon')
+        embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/icon')
         embed.add_field(name='**Aliases**',
             value='s\n',
             inline=False
@@ -159,7 +159,7 @@ class Help(commands.Cog):
             description='`history [riot_id] {number}`',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/icon')
+        embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/icon')
         embed.add_field(name='**Aliases**',
             value='h, hist\n',
             inline=False
@@ -187,7 +187,7 @@ class Help(commands.Cog):
             description='`notes`',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/icon')
+        embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/icon')
         embed.add_field(name='**Aliases**',
             value='n, pn\n',
             inline=False
@@ -213,7 +213,7 @@ class Help(commands.Cog):
             description='`tiers {vote [agent] [agent] [agent]}`',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/icon')
+        embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/icon')
         embed.add_field(name='**Aliases**',
             value='tl\n',
             inline=False
@@ -241,7 +241,7 @@ class Help(commands.Cog):
             description='`agents [agent]`',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/icon')
+        embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/icon')
         embed.add_field(name='**Aliases**',
             value='None\n',
             inline=False
@@ -268,7 +268,7 @@ class Help(commands.Cog):
             description='`arrows [map]`',
             color=globals.embed_color
         )
-        embed.set_thumbnail(url='http://assets.hubermjonathan.com/vlrnt/icon')
+        embed.set_thumbnail(url='http://vlrnt.hubermjonathan.com/icon')
         embed.add_field(name='**Aliases**',
             value='arw\n',
             inline=False
