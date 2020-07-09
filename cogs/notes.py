@@ -27,6 +27,7 @@ class Notes(commands.Cog):
         # get the highlights
         r = requests.get(notes)
         soup = BeautifulSoup(r.content, 'html.parser')
+        highlights = None
         for img in soup.find_all('img'):
             if 'Patch_Notes' in img.get('alt'):
                 highlights = img.get('src')
@@ -38,7 +39,9 @@ class Notes(commands.Cog):
             url=notes,
             color=globals.embed_color
         )
-        embed.set_image(url=highlights)
+
+        if highlights is not None:
+            embed.set_image(url=highlights)
 
         # send the message
         await ctx.send(embed=embed)
