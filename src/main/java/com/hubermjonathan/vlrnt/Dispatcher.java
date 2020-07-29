@@ -17,10 +17,14 @@ public class Dispatcher extends ListenerAdapter {
         if (!tokens[0].equals("!val")) return;
 
         Admin admin = new Admin(event);
+        Agents agents = new Agents(event);
 
         switch (tokens[1]) {
             case ("stats"):
                 admin.sendStatsMessage();
+                break;
+            case ("agents"):
+                agents.sendAgentMessage(tokens.length > 2 ? tokens[2] : null);
                 break;
             default:
                 message.addReaction(Constants.NO_COMMAND).queue();
