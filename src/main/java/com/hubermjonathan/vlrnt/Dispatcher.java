@@ -5,6 +5,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import javax.annotation.Nonnull;
+import java.util.Arrays;
 
 public class Dispatcher extends ListenerAdapter {
     @Override
@@ -20,9 +21,11 @@ public class Dispatcher extends ListenerAdapter {
         Agents agents = new Agents(event);
         Arrows arrows = new Arrows(event);
         Help help = new Help(event);
+        Tiers tiers = new Tiers(event);
 
         switch (tokens[1]) {
             case ("stats"):
+                if (!event.getAuthor().getId().equals("196141424318611457")) return;
                 admin.sendStatsMessage();
                 break;
             case ("agents"):
@@ -34,6 +37,10 @@ public class Dispatcher extends ListenerAdapter {
                 break;
             case ("help"):
                 help.sendHelpMessage(tokens.length > 2 ? tokens[2] : null);
+                break;
+            case ("tiers"):
+            case ("tl"):
+                tiers.handleTiersCommand(tokens.length > 2 ? tokens[2] : null, tokens.length > 3 ? Arrays.copyOfRange(tokens, 3, tokens.length) : null);
                 break;
             default:
                 message.addReaction(Constants.NO_COMMAND).queue();
