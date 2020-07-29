@@ -1,7 +1,8 @@
-FROM python:3.8-alpine
-WORKDIR /usr/src/app
-COPY requirements.txt .
-RUN apk add build-base
-RUN pip install --no-cache-dir -r requirements.txt
+FROM maven:3.6.3-jdk-8 as build
 COPY . .
-CMD ["python", "-u", "bot.py"]
+RUN mvn clean compile package
+
+FROM openjdk:8 as final
+WORKDIR /app
+COPY --from=build target/vlrnt-*-jar-with-dependencies.jar .
+CMD ["/bin/sh", "-c", "java -jar vlrnt-*-jar-with-dependencies.jar"]
