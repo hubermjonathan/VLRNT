@@ -19,6 +19,7 @@ public class Dispatcher extends ListenerAdapter {
         Admin admin = new Admin(event);
         Agents agents = new Agents(event);
         Arrows arrows = new Arrows(event);
+        Help help = new Help(event);
 
         switch (tokens[1]) {
             case ("stats"):
@@ -28,7 +29,11 @@ public class Dispatcher extends ListenerAdapter {
                 agents.sendAgentMessage(tokens.length > 2 ? tokens[2] : null);
                 break;
             case ("arrows"):
+            case ("arw"):
                 arrows.sendArrowMessage(tokens.length > 2 ? tokens[2] : null);
+                break;
+            case ("help"):
+                help.sendHelpMessage(tokens.length > 2 ? tokens[2] : null);
                 break;
             default:
                 message.addReaction(Constants.NO_COMMAND).queue();

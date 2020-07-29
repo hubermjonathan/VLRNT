@@ -18,7 +18,7 @@ public class Arrows extends Feature {
         if (map == null) {
             EmbedBuilder embedBuilder = new EmbedBuilder();
             embedBuilder.setTitle("Which map?");
-            embedBuilder.setDescription("Use `val! arrows [map_name]` to choose a map from the following.");
+            embedBuilder.setDescription("Use `!val arrows [map_name]` to choose a map from the following.");
             embedBuilder.addField("**Maps**", "Bind, Haven, Split, Ascent", false);
             embedBuilder.setColor(Constants.EMBED_COLOR);
             channel.sendMessage(embedBuilder.build()).queue();
