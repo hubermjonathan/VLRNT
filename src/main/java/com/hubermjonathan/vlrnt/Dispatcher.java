@@ -22,6 +22,7 @@ public class Dispatcher extends ListenerAdapter {
         Arrows arrows = new Arrows(event);
         Help help = new Help(event);
         Tiers tiers = new Tiers(event);
+        Notes notes = new Notes(event);
 
         switch (tokens[1]) {
             case ("stats"):
@@ -41,6 +42,11 @@ public class Dispatcher extends ListenerAdapter {
             case ("tiers"):
             case ("tl"):
                 tiers.handleTiersCommand(tokens.length > 2 ? tokens[2] : null, tokens.length > 3 ? Arrays.copyOfRange(tokens, 3, tokens.length) : null);
+                break;
+            case ("notes"):
+            case ("n"):
+            case ("pn"):
+                notes.sendNotesMessage();
                 break;
             default:
                 message.addReaction(Constants.NO_COMMAND).queue();
